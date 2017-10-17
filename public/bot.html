@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Health Insurance Bot </title>
+    <title>Cloud Insurance Co - the one with the AI Bot</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
                 <div class="banner">
                     <div class="titleArea">
                         <div class="logo"><img class="logoImage" src="images/wash/cloud.svg"></div>
-                        <div class="name"><a class="home" href=".">Health Insurance Bot </a></div>
+                        <div class="name"><a class="home" href=".">Cloud Insurance Co.</a></div>
                     </div>
                     <div class="loginArea">
                         <div class="menu"><a class="menulink" href="./about">About</a></div>
@@ -33,6 +33,51 @@
             </header>
             <section class="healthLayout">
 
+
+
+                    <div class="benefitkit">
+                        <div class="benefitdata">
+                            <div id="header" class="header">Health Insurance</div>
+                            <div id="owner" class="owner" style = "display:none"></div>
+                            <div class="healthTabArea">
+                              <div  class = "healthTab"  onClick="selectBenefitsTab()"><span id="benefitsTabMenu" class = "tabLink selected">HEALTH BENEFITS</span></div>
+                              <div  class = "healthTab" onClick="selectClaimTab()"><span id="claimTabMenu" class = "tabLink">FILE A CLAIM</span></div>
+                              <div  accesskey="" class = "healthTab" onClick="location.href='./claims'"><span id="historyTabMenu" class = "tabLink">CLAIM HISTORY</span></div>
+
+                            </div>
+                            <div class="benefitset" id="benefitset">
+
+                            </div>
+                            <div id = "claimTab" class = "claimTab" style = "display:none">
+                              <div id="chatSubmit" class="interactionsub"></div>
+
+                              <div class="claimbox">
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Date</label>
+                                      <input id="claimdate" type="date" class="claiminput">
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Benefit</label>
+                                      <select id="benefittypes" class="claiminput">
+                                      </select>
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Provider</label>
+                                      <input id="provider" class="claiminput">
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Amount ($)</label>
+                                      <input id="claimamount" type=number class="claiminput">
+                                  </div>
+                              </div>
+                              <div class="claimcontrols">
+                                  <button class="claimbutton" onclick="submitClaim()">Claim</button>
+                              </div>
+
+                              <div class="claimmessages" id="claimmessages"></div>
+                          </div>
+                        </div>
+                    </div>
 
                     <div class="chatbot">
                         <div class = "anaBanner">Questions? Try asking Ana.</div>
